@@ -231,7 +231,7 @@
         <div class="content">
             <!-- العداد الأول لحد الرياضيات -->
             <div class="countdown-section first">
-                <h2 class="section-title">العداد الأول</h2>
+                <h2 class="section-title">العداد الاول لحد الرياضيات</h2>
                 <div class="countdown-grid">
                     <div class="countdown-item first">
                         <div id="days1" class="countdown-number">00</div>
@@ -257,7 +257,7 @@
             
             <!-- العداد الثاني لنهاية الامتحانات -->
             <div class="countdown-section second">
-                <h2 class="section-title">العداد الثاني</h2>
+                <h2 class="section-title">العداد الثاني لنهاية الامتحانات</h2>
                 <div class="countdown-grid">
                     <div class="countdown-item second">
                         <div id="days2" class="countdown-number">00</div>
@@ -327,17 +327,7 @@
                 document.getElementById(`minutes${suffix}`).innerHTML = minutes.toString().padStart(2, '0');
                 document.getElementById(`seconds${suffix}`).innerHTML = seconds.toString().padStart(2, '0');
                 
-                // تحديث الرسالة حسب الوقت المتبقي
-                const messageElement = document.getElementById(`message${suffix}`);
-                if (days <= 1) {
-                    messageElement.innerHTML = '⚠️ أقل من يوم واحد! الوقت ينفد!';
-                } else if (days <= 3) {
-                    messageElement.innerHTML = '🔥 الأيام الأخيرة! استعد جيداً!';
-                } else if (days <= 7) {
-                    messageElement.innerHTML = '⏰ أقل من أسبوع! كن مستعداً!';
-                } else if (days <= 30) {
-                    messageElement.innerHTML = '📅 أقل من شهر! حان وقت الاستعداد!';
-                } else {
+            
                     if (suffix === '1') {
                         messageElement.innerHTML = 'تاريخ الانتهاء: ٦ سبتمبر ٢٠٢٥، الساعة ١٠:٠٠ صباحاً';
                     } else {
