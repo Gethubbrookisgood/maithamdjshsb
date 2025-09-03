@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>عداد النعيم</title>
+    <title>عداد النعيم</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap');
@@ -327,14 +327,14 @@
                 document.getElementById(`minutes${suffix}`).innerHTML = minutes.toString().padStart(2, '0');
                 document.getElementById(`seconds${suffix}`).innerHTML = seconds.toString().padStart(2, '0');
                 
-            
-                    if (suffix === '1') {
-                        messageElement.innerHTML = 'تاريخ الانتهاء: ٦ سبتمبر ٢٠٢٥، الساعة ١٠:٠٠ صباحاً';
-                    } else {
-                        messageElement.innerHTML = 'تاريخ الانتهاء: ١٠ سبتمبر ٢٠٢٥، الساعة ١٠:٠٠ صباحاً';
-                    }
+                // عرض رسالة التاريخ الثابتة
+                if (suffix === '1') {
+                    document.getElementById(`message${suffix}`).innerHTML = 'تاريخ الانتهاء: ٦ سبتمبر ٢٠٢٥، الساعة ١٠:٠٠ صباحاً';
+                } else {
+                    document.getElementById(`message${suffix}`).innerHTML = 'تاريخ الانتهاء: ١٠ سبتمبر ٢٠٢٥، الساعة ١٠:٠٠ صباحاً';
                 }
             } else {
+                // عند انتهاء العداد
                 document.getElementById(`days${suffix}`).innerHTML = '00';
                 document.getElementById(`hours${suffix}`).innerHTML = '00';
                 document.getElementById(`minutes${suffix}`).innerHTML = '00';
